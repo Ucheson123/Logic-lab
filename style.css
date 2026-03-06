@@ -1,0 +1,205 @@
+/* =========================================
+   1. Core Styles & Reset
+   ========================================= */
+:root {
+    /* Color Palette from Mockup */
+    --primary-blue: #0056b3; /* Main headers and buttons */
+    --accent-red: #dc3545;  /* Reset button */
+    --bg-gray: #f4f4f4;    /* Main background */
+    --card-bg: #ffffff;    /* Card background */
+    --text-dark: #333333;  /* Main text color */
+    
+    /* Typography */
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    line-height: 1.5;
+    padding: 10px; /* Small padding for the whole body on mobile */
+}
+
+/* =========================================
+   2. Layout Container (main)
+   ========================================= */
+main {
+    max-width: 480px; /* Limits width to look like a phone screen */
+    margin: 0 auto;   /* Centers the phone view on desktop */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;        /* Spacing between all main elements */
+}
+
+/* =========================================
+   3. Header Styling
+   ========================================= */
+header h1 {
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* =========================================
+   4. Input Controls Section (Section 1)
+   ========================================= */
+.section-1-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-1-inputs h2 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.input-controls-wrapper {
+    display: flex;
+    gap: 10px; /* Side-by-side inputs on mobile */
+}
+
+.input-group {
+    flex: 1; /* Both input groups take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Main 'Process Data' and Input Buttons styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:active {
+    background-color: #004494; /* Darker blue when clicked */
+}
+
+/* The display text area below 'Get Value' buttons */
+.input-group p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Special styling for the values themselves (like "(String) '5'") */
+.highlight-text {
+    font-family: var(--font-mono);
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+/* =========================================
+   5. Dashboard & Cards Section (Section 2)
+   ========================================= */
+.section-2-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Container for top two cards side-by-side */
+.cards-row {
+    display: flex;
+    gap: 10px;
+}
+
+.cards-row .card {
+    flex: 1; /* Both cards take equal width in the row */
+}
+
+/* Standard card styling */
+.card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle depth */
+}
+
+.card h2 {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 10px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Styling the lines of output text within cards */
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Targeting EVERY answer span to use monospace code font */
+.card span {
+    font-family: var(--font-mono);
+    color: var(--text-dark);
+    background-color: #f8f9fa; /* Slight background highlight */
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* =========================================
+   6. Footer Styling
+   ========================================= */
+footer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-buttons button {
+    flex: 1;
+}
+
+/* Special red style for the reset button */
+#btn-confirm-reset {
+    background-color: var(--accent-red);
+}
+
+#btn-confirm-reset:active {
+    background-color: #b22a37;
+}

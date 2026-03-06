@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logic Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>JS Day 1 Sandbox: Logic Lab</h1>
+        </header>
+
+        <section class="section-1-inputs">
+            <h2>Input Controls (Variables/Prompt)</h2>
+            
+            <div class="input-controls-wrapper">
+                <div class="input-group">
+                    <button id="btn-get-a">Get Value A</button>
+                    <p>Current A: <span id="display-a-value" class="highlight-text">Empty</span></p>
+                </div>
+                
+                <div class="input-group">
+                    <button id="btn-get-b">Get Value B</button>
+                    <p>Current B: <span id="display-b-value" class="highlight-text">Empty</span></p>
+                </div>
+            </div>
+
+            <button id="btn-process-data">Process Data</button>
+        </section>
+
+        <section class="section-2-dashboard">
+            
+            <div class="cards-row">
+                <div class="card">
+                    <h2>Data Types</h2>
+                    <p>Variable A is type: <span id="type-of-a"></span></p>
+                    <p>Variable B is type: <span id="type-of-b"></span></p>
+                </div>
+
+                <div class="card">
+                    <h2>Explicit Conversions</h2>
+                    <p>A to Number: <span id="a-to-number"></span></p>
+                    <p>B to String: <span id="b-to-string"></span></p>
+                    <p>B to Boolean: <span id="b-to-boolean"></span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Operations Panel</h2>
+                
+                <h3>MATH OPERATORS (coercion focus):</h3>
+                <p>A + B (concat): <span id="concat-result"></span></p>
+                <p>Number(A) + Number(B) (addition): <span id="addition-result"></span></p>
+                <p>A - B (forced number): <span id="subtraction-result"></span></p>
+                <p>A * B (forced number): <span id="multiplication-result"></span></p>
+                
+                <hr>
+                
+                <h3>COMPARISON OPERATORS:</h3>
+                <p>A == B (loose): <span id="loose-comparison"></span></p>
+                <p>A === B (strict): <span id="strict-comparison"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Logical & Bitwise Summary</h2>
+                <p>(If A is truthy AND B is truthy): <span id="logical-and-result"></span></p>
+                <p>(Result of (A & B) bitwise AND):  <span id="bitwise-result"></span></p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-buttons">
+                <button id="btn-alert-summary">Alert Summary</button>
+                <button id="btn-confirm-reset">Confirm Reset</button>
+            </div>
+        </footer>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
